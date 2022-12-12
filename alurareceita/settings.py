@@ -11,9 +11,13 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 import os
-from os import getenv
 from pathlib import Path
-from dotenv import load_dotenv
+#pip install django-environ
+import environ
+
+# Initialise environment variables
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = str(getenv('SECRET_KEY'))
+#SECRET_KEY = str(getenv('SECRET_KEY'))
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -83,8 +88,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dtin_local',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'USER': env('USER_POSTGRES'),
+        'PASSWORD': env('PASS_POSTGRES'),
         'HOST': '172.18.189.240'
     }
 }
