@@ -90,7 +90,7 @@ DATABASES = {
         'NAME': 'dtin_local',
         'USER': env('USER_POSTGRES'),
         'PASSWORD': env('PASS_POSTGRES'),
-        'HOST': '172.18.189.240'
+        'HOST': '172.18.177.116'
     }
 }
 
