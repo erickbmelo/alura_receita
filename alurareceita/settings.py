@@ -13,11 +13,11 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from pathlib import Path
 #pip install django-environ
-import environ
+#import environ
 
 # Initialise environment variables
-env = environ.Env()
-environ.Env.read_env()
+#env = environ.Env()
+#environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,6 +39,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'pessoas',
     'receitas',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -88,9 +89,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dtin_local',
-        'USER': env('USER_POSTGRES'),
-        'PASSWORD': env('PASS_POSTGRES'),
-        'HOST': '172.18.177.116'
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': '172.26.194.202',
+        'PORT': '5432',
     }
 }
 
