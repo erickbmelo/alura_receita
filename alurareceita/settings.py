@@ -88,10 +88,10 @@ WSGI_APPLICATION = 'alurareceita.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dtin_local',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': '172.26.194.202',
+        'HOST': '172.21.253.244',
         'PORT': '5432',
     }
 }
