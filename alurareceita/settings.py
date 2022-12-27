@@ -39,6 +39,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'usuarios',
     'pessoas',
     'receitas',
     'django.contrib.admin',
@@ -64,7 +65,7 @@ ROOT_URLCONF = 'alurareceita.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'alurareceita/static/')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -91,7 +92,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': '172.21.253.244',
+        'HOST': '172.24.112.33',
         'PORT': '5432',
     }
 }
