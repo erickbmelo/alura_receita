@@ -49,3 +49,10 @@ No app (receitas)
     referencia em views.py
 
 Cria pasta de arquivos estáticos dentro de setup e referencia em settings.py
+
+
+
+se não conseguir instalar o psycopg2:
+sudo apt-get install libpq-dev
+pip install psycopg2
+
